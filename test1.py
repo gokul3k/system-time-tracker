@@ -54,12 +54,18 @@
 # # Serializing json
 # with open("sample.json", "w") as outfile:
 #     json.dump(dictionary, outfile)
-import os
-import getpass
-path = os.path.join('..','Documents and Settings',os.getlogin(),'Desktop')
-path2 = os.path.join('..','Documents and Settings',getpass.getuser(),'Desktop')
-path3 = os.getlogin()
-print(path)
-print(path2)
-print(path3)
+# import os
+# import getpass
+# path = os.path.join('..','Documents and Settings',os.getlogin(),'Desktop')
+# path2 = os.path.join('..','Documents and Settings',getpass.getuser(),'Desktop')
+# path3 = os.getlogin()
+# print(path)
+# print(path2)
+# print(path3)
 
+import pandas as pd
+from sqlalchemy import create_engine
+
+engine = create_engine("mysql://gokul:Sunnyday01!@gokulproject.database.windows.net/azure-log-backup")
+
+print("Connection Successfull...")
